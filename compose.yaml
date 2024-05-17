@@ -1,10 +1,10 @@
 services:
   anon-bot:
-    build: ../anon-bot/
+    build: https://github.com/synth-evol/anon-bot.git
     ports:
       - "8080:8080"
   anon-bot-messager:
-    build: ../anon-bot-messager/
+    build: https://github.com/synth-evol/anon-bot-messager.git
     ports:
       - "8000:8000"
     environment:
