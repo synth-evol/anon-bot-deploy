@@ -2,10 +2,15 @@ services:
   anon-bot:
     build: https://github.com/synth-evol/anon-bot.git
     ports:
-      - "8080:8080"
   anon-bot-messager:
     build: https://github.com/synth-evol/anon-bot-messager.git
-    ports:
-      - "8000:8000"
     environment:
       - DISCORD_URL=${DISCORD_URL}
+  caddy:
+    image: caddy:2.7-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile

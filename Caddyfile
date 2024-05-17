@@ -1,0 +1,3 @@
+tteller.org {
+    reverse_proxy anon-bot:8080
+}
