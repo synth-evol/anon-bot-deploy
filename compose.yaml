@@ -1,7 +1,6 @@
 services:
   anon-bot:
     build: https://github.com/synth-evol/anon-bot.git
-    ports:
   anon-bot-messager:
     build: https://github.com/synth-evol/anon-bot-messager.git
     environment:
